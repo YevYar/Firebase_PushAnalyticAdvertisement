@@ -7,7 +7,9 @@
  */
 
 import React from 'react';
+import analytics from '@react-native-firebase/analytics';
 import {
+  Button,
   SafeAreaView,
   StyleSheet,
   ScrollView,
@@ -29,6 +31,16 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
+        <Button
+          title="SEND EVENT"
+          onPress={async () => {
+            await analytics().logEvent('product_view', {
+              id: '123456789',
+              color: 'red',
+              via: 'ProductCatalog',
+            });
+          }}
+        />
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
