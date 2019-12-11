@@ -182,8 +182,10 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
-    implementation 'com.google.firebase:firebase-analytics:17.2.0'
-    implementation "com.google.firebase:firebase-messaging:19.0.1"
+    implementation project(':react-native-firebase')
+    implementation "com.google.firebase:firebase-core:16.0.9"
+    implementation "com.google.firebase:firebase-messaging:18.0.0"
+    implementation 'me.leolin:ShortcutBadger:1.1.21@aar' // <-- Add this line if you wish to use badge on Android
 
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";

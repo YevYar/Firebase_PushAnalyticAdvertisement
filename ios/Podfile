@@ -34,7 +34,9 @@ target 'Firebase_PushAnalyticAdvertisement' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
   
-  pod 'Firebase/Messaging'
+  pod 'Firebase/Core', '~> 6.3.0'
+  pod 'GoogleIDFASupport', '~> 3.14.0'
+  pod 'Firebase/Messaging', '~> 6.3.0'
 
   use_native_modules!
 end

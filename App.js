@@ -6,8 +6,8 @@
  * @flow
  */
 
-import React from 'react';
-import analytics from '@react-native-firebase/analytics';
+import React, {Component} from 'react';
+
 import {
   Button,
   SafeAreaView,
@@ -18,109 +18,67 @@ import {
   StatusBar,
 } from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
 
-const App: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <Button
-          title="SEND EVENT"
-          onPress={async () => {
-            await analytics().logEvent('product_view', {
-              id: '123456789',
-              color: 'red',
-              via: 'ProductCatalog',
-            });
-          }}
-        />
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
-  );
-};
+import firebase from 'react-native-firebase';
+
+import {initPushNotifications} from './NotifService';
+
+class App extends Component {
+  async componentDidMount() {
+    const onNotificationCallback = () => {
+      this.setState({bgColor: '#1e90ff55', text: 'on notification'});
+    };
+    const onInitialNotificationCallback = () => {
+      this.setState({bgColor: '#F55', text: 'get Initial Notification'});
+    };
+    const onNotificationOpenedCallback = () => {
+      this.setState({bgColor: '#0F55', text: 'on Notification Opened'});
+    };
+    initPushNotifications(
+      onNotificationCallback,
+      onInitialNotificationCallback,
+      onNotificationOpenedCallback,
+    );
+  }
+
+  state = {
+    bgColor: 'white',
+    text: 'Initial',
+  };
+
+  render() {
+    return (
+      <View style={{backgroundColor: this.state.bgColor, flex: 1}}>
+        <StatusBar barStyle="dark-content" />
+        <SafeAreaView>
+          <ScrollView
+            contentInsetAdjustmentBehavior="automatic"
+            style={styles.scrollView}>
+            <Header />
+            <Button
+              title="SEND EVENT"
+              onPress={async () => {
+                await firebase.analytics().logEvent('product_view', {
+                  id: '123456789',
+                  color: 'red',
+                  via: 'ProductCatalog',
+                });
+              }}
+            />
+            <Text style={styles.text}>{this.state.text}</Text>
+          </ScrollView>
+        </SafeAreaView>
+      </View>
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: Colors.lighter,
   },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
+  text: {fontSize: 30, color: 'red', alignSelf: 'center', marginTop: 30},
 });
 
 export default App;
