@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" userLabel="Notification View Controller" customClass="NotificationViewController" customModule="MuPushContent" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="122"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="&lt;Title&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8n-2m-dGj">
+                                <rect key="frame" x="3" y="3" width="314" height="29"/>
+                                <accessibility key="accessibilityConfiguration" identifier="titleLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="titleLabel"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="&lt;Subtitle&gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfB-Ay-zoS">
+                                <rect key="frame" x="5" y="42" width="310" height="23"/>
+                                <accessibility key="accessibilityConfiguration" identifier="subtitleLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="subtitleLabel"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="&lt;Body&gt;" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKx-pe-eN1">
+                                <rect key="frame" x="7" y="72" width="306" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="bodylabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="subtitleLabel"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="wfB-Ay-zoS" secondAttribute="trailing" constant="5" id="UuZ-Ve-8hu"/>
+                            <constraint firstItem="zKx-pe-eN1" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" constant="7" id="Ve9-Gt-lXb"/>
+                            <constraint firstItem="wfB-Ay-zoS" firstAttribute="top" secondItem="p8n-2m-dGj" secondAttribute="bottom" constant="10" id="Xg1-CU-e28"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="zKx-pe-eN1" secondAttribute="trailing" constant="7" id="cBa-DR-Re7"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="p8n-2m-dGj" secondAttribute="trailing" constant="3" id="dTo-mf-iRt"/>
+                            <constraint firstItem="p8n-2m-dGj" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" constant="3" id="gwf-wi-obd"/>
+                            <constraint firstItem="wfB-Ay-zoS" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" constant="5" id="hom-mc-bCm"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="bottom" secondItem="zKx-pe-eN1" secondAttribute="bottom" constant="2" id="k3J-sI-7Hu"/>
+                            <constraint firstItem="p8n-2m-dGj" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="3" id="qUB-D6-Dcw"/>
+                            <constraint firstItem="zKx-pe-eN1" firstAttribute="top" secondItem="wfB-Ay-zoS" secondAttribute="bottom" constant="7" id="zd4-qZ-WdB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2BE-c3-nQJ"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="122"/>
+                    <connections>
+                        <outlet property="bodyTitle" destination="zKx-pe-eN1" id="Su4-Kl-Fzk"/>
+                        <outlet property="subtitleLabel" destination="wfB-Ay-zoS" id="2JX-GK-35Y"/>
+                        <outlet property="titleLabel" destination="p8n-2m-dGj" id="4BP-TS-fSp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="110.49107142857143"/>
+        </scene>
+    </scenes>
+</document>

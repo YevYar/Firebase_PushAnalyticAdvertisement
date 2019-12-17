@@ -38,6 +38,25 @@
   [FIRApp configure];
   }
   
+  /*UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
+  UNNotificationAction* openAction = [UNNotificationAction actionWithIdentifier: @"OpenNotification" title: @"Open"
+  options:UNNotificationActionOptionForeground];
+  UNNotificationAction* closeAction = [UNNotificationAction actionWithIdentifier: @"CloseNotification" title: @"Close"
+                                                                         options:UNNotificationActionOptionDestructive];
+  UNNotificationCategory* defaultCategory = [UNNotificationCategory categoryWithIdentifier: @"CustomSamplePush" actions: @[openAction, closeAction] intentIdentifiers: @[] options: @[]];
+  NSSet *categories = [NSSet setWithObjects: defaultCategory, nil];
+  [center setNotificationCategories: categories];*/
+  
+  UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
+  UNNotificationCategory* defaultCategory = [UNNotificationCategory categoryWithIdentifier: @"CustomSamplePush" actions: @[] intentIdentifiers: @[] options: @[]];
+  NSSet *categories = [NSSet setWithObjects: defaultCategory, nil];
+  [center setNotificationCategories: categories];
+  
+  /*let center = UNUserNotificationCenter.current()
+  let openAction = UNNotificationAction(identifier: "OpenNotification", title: NSLocalizedString("Abrir", comment: ""), options: UNNotificationActionOptions.foreground)
+  let deafultCategory = UNNotificationCategory(identifier: "CustomSamplePush", actions: [openAction], intentIdentifiers: [], options: [])
+  center.setNotificationCategories(Set([deafultCategory]))*/
+  
   return YES;
 }
 

@@ -25,6 +25,8 @@ export const initPushNotifications = async (
 
 export const getToken = async () => {
   const fcmToken = await firebase.messaging().getToken();
+  const apnsToken = await firebase.messaging().ios.getAPNSToken();
+  console.log('APNS ============', apnsToken);
   if (fcmToken) {
     console.log(fcmToken);
     return fcmToken;
@@ -48,9 +50,21 @@ export const checkPermission = async () => {
 export const requestPermission = async () => {
   try {
     await firebase.messaging().requestPermission();
-    if (!firebase.messaging().isRegisteredForRemoteNotifications) {
-      await firebase.messaging().registerForRemoteNotifications();
-    }
+    firebase
+      .messaging()
+      .ios.registerForRemoteNotifications()
+      .then(() => {
+        firebase
+          .messaging()
+          .ios.getAPNSToken()
+          .then(token => {
+            console.log('APNS ============', token);
+          });
+      });
+    /* if (!firebase.messaging().isRegisteredForRemoteNotifications) {
+      await firebase.messaging().ios.registerForRemoteNotifications();
+    }*/
+
     getToken();
   } catch (error) {
     console.log('permission rejected', error);
@@ -65,6 +79,8 @@ export const createNotificationListeners = async (
   firebase.messaging().onTokenRefresh(async fcmToken => {
     if (fcmToken) {
       console.log('New FCM Token:', fcmToken);
+      const apnsToken = await firebase.messaging().ios.getAPNSToken();
+      console.log('APNS ============', apnsToken);
     }
   });
 
