@@ -13,6 +13,12 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		36125DD62397E5740028F755 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36125DD52397E5740028F755 /* GoogleService-Info.plist */; };
+		362D247A23AA592C00EBB2BD /* NotificationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 362D247923AA592C00EBB2BD /* NotificationDelegate.m */; };
+		36AAD72923AA0A0D00FC2436 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC943623A7B52700538818 /* UserNotifications.framework */; };
+		36AAD72A23AA0A0D00FC2436 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC943823A7B52700538818 /* UserNotificationsUI.framework */; };
+		36AAD72D23AA0A0D00FC2436 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AAD72C23AA0A0D00FC2436 /* NotificationViewController.swift */; };
+		36AAD73023AA0A0D00FC2436 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36AAD72E23AA0A0D00FC2436 /* MainInterface.storyboard */; };
+		36AAD73423AA0A0D00FC2436 /* MyPushContent_4.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 36AAD72823AA0A0D00FC2436 /* MyPushContent_4.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		36DC942823A78EA400538818 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DC942723A78EA400538818 /* NotificationService.swift */; };
 		36DC942C23A78EA400538818 /* MyPush.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 36DC942523A78EA400538818 /* MyPush.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		36DC943723A7B52700538818 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC943623A7B52700538818 /* UserNotifications.framework */; };
@@ -25,11 +31,21 @@
 		36E8C25223A8F51700FA9A0C /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E8C25123A8F51700FA9A0C /* NotificationViewController.swift */; };
 		36E8C25523A8F51700FA9A0C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E8C25323A8F51700FA9A0C /* MainInterface.storyboard */; };
 		36E8C25923A8F51700FA9A0C /* MyPushContent_2.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 36E8C24D23A8F51700FA9A0C /* MyPushContent_2.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		36E8C26423A8F7E300FA9A0C /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E8C26323A8F7E300FA9A0C /* NotificationService.swift */; };
-		36E8C26823A8F7E300FA9A0C /* SecondService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 36E8C26123A8F7E300FA9A0C /* SecondService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		36E8C28523A91A7E00FA9A0C /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC943623A7B52700538818 /* UserNotifications.framework */; };
+		36E8C28623A91A7E00FA9A0C /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC943823A7B52700538818 /* UserNotificationsUI.framework */; };
+		36E8C28923A91A7E00FA9A0C /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E8C28823A91A7E00FA9A0C /* NotificationViewController.swift */; };
+		36E8C28C23A91A7E00FA9A0C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E8C28A23A91A7E00FA9A0C /* MainInterface.storyboard */; };
+		36E8C29023A91A7E00FA9A0C /* MyPushContent_3.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 36E8C28423A91A7E00FA9A0C /* MyPushContent_3.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		36AAD73223AA0A0D00FC2436 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36AAD72723AA0A0D00FC2436;
+			remoteInfo = MyPushContent_4;
+		};
 		36DC942A23A78EA400538818 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
@@ -51,12 +67,12 @@
 			remoteGlobalIDString = 36E8C24C23A8F51700FA9A0C;
 			remoteInfo = MyPushContent_2;
 		};
-		36E8C26623A8F7E300FA9A0C /* PBXContainerItemProxy */ = {
+		36E8C28E23A91A7E00FA9A0C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 36E8C26023A8F7E300FA9A0C;
-			remoteInfo = SecondService;
+			remoteGlobalIDString = 36E8C28323A91A7E00FA9A0C;
+			remoteInfo = MyPushContent_3;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -67,8 +83,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				36E8C26823A8F7E300FA9A0C /* SecondService.appex in Embed App Extensions */,
+				36E8C29023A91A7E00FA9A0C /* MyPushContent_3.appex in Embed App Extensions */,
 				36DC944323A7B52700538818 /* MuPushContent.appex in Embed App Extensions */,
+				36AAD73423AA0A0D00FC2436 /* MyPushContent_4.appex in Embed App Extensions */,
 				36E8C25923A8F51700FA9A0C /* MyPushContent_2.appex in Embed App Extensions */,
 				36DC942C23A78EA400538818 /* MyPush.appex in Embed App Extensions */,
 			);
@@ -91,6 +108,12 @@
 		1EFFA82B63C9DA10C9C0BAEE /* libPods-Firebase_PushAnalyticAdvertisement-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Firebase_PushAnalyticAdvertisement-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A759FBC8E8BEBB90940F80E /* Pods-Firebase_PushAnalyticAdvertisement-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase_PushAnalyticAdvertisement-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Firebase_PushAnalyticAdvertisement-tvOSTests/Pods-Firebase_PushAnalyticAdvertisement-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		36125DD52397E5740028F755 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase_PushAnalyticAdvertisement/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		362D247923AA592C00EBB2BD /* NotificationDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NotificationDelegate.m; path = Firebase_PushAnalyticAdvertisement/NotificationDelegate.m; sourceTree = "<group>"; };
+		362D247B23AA595F00EBB2BD /* NotificationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NotificationDelegate.h; path = Firebase_PushAnalyticAdvertisement/NotificationDelegate.h; sourceTree = "<group>"; };
+		36AAD72823AA0A0D00FC2436 /* MyPushContent_4.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyPushContent_4.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		36AAD72C23AA0A0D00FC2436 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		36AAD72F23AA0A0D00FC2436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		36AAD73123AA0A0D00FC2436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36DC942523A78EA400538818 /* MyPush.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyPush.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		36DC942723A78EA400538818 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		36DC942923A78EA400538818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,9 +127,10 @@
 		36E8C25123A8F51700FA9A0C /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		36E8C25423A8F51700FA9A0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		36E8C25623A8F51700FA9A0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36E8C26123A8F7E300FA9A0C /* SecondService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SecondService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		36E8C26323A8F7E300FA9A0C /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
-		36E8C26523A8F7E300FA9A0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36E8C28423A91A7E00FA9A0C /* MyPushContent_3.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyPushContent_3.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		36E8C28823A91A7E00FA9A0C /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		36E8C28B23A91A7E00FA9A0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		36E8C28D23A91A7E00FA9A0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36FEFC51239A8F5F007DE8DF /* Firebase_PushAnalyticAdvertisement.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Firebase_PushAnalyticAdvertisement.entitlements; path = Firebase_PushAnalyticAdvertisement/Firebase_PushAnalyticAdvertisement.entitlements; sourceTree = "<group>"; };
 		4C8F42B0424C5222F41D3444 /* Pods-Firebase_PushAnalyticAdvertisement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase_PushAnalyticAdvertisement.release.xcconfig"; path = "Target Support Files/Pods-Firebase_PushAnalyticAdvertisement/Pods-Firebase_PushAnalyticAdvertisement.release.xcconfig"; sourceTree = "<group>"; };
 		4FD417E41963BABC5EA451EF /* libPods-Firebase_PushAnalyticAdvertisement-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Firebase_PushAnalyticAdvertisement-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +152,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				003D6DACF169430C6F743ACE /* libPods-Firebase_PushAnalyticAdvertisement.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36AAD72523AA0A0D00FC2436 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36AAD72A23AA0A0D00FC2436 /* UserNotificationsUI.framework in Frameworks */,
+				36AAD72923AA0A0D00FC2436 /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,10 +189,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		36E8C25E23A8F7E300FA9A0C /* Frameworks */ = {
+		36E8C28123A91A7E00FA9A0C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36E8C28623A91A7E00FA9A0C /* UserNotificationsUI.framework in Frameworks */,
+				36E8C28523A91A7E00FA9A0C /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +230,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				362D247923AA592C00EBB2BD /* NotificationDelegate.m */,
+				362D247B23AA595F00EBB2BD /* NotificationDelegate.h */,
 			);
 			name = Firebase_PushAnalyticAdvertisement;
 			sourceTree = "<group>";
@@ -212,6 +249,16 @@
 				36DC943823A7B52700538818 /* UserNotificationsUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		36AAD72B23AA0A0D00FC2436 /* MyPushContent_4 */ = {
+			isa = PBXGroup;
+			children = (
+				36AAD72C23AA0A0D00FC2436 /* NotificationViewController.swift */,
+				36AAD72E23AA0A0D00FC2436 /* MainInterface.storyboard */,
+				36AAD73123AA0A0D00FC2436 /* Info.plist */,
+			);
+			path = MyPushContent_4;
 			sourceTree = "<group>";
 		};
 		36DC942623A78EA400538818 /* MyPush */ = {
@@ -243,13 +290,14 @@
 			path = MyPushContent_2;
 			sourceTree = "<group>";
 		};
-		36E8C26223A8F7E300FA9A0C /* SecondService */ = {
+		36E8C28723A91A7E00FA9A0C /* MyPushContent_3 */ = {
 			isa = PBXGroup;
 			children = (
-				36E8C26323A8F7E300FA9A0C /* NotificationService.swift */,
-				36E8C26523A8F7E300FA9A0C /* Info.plist */,
+				36E8C28823A91A7E00FA9A0C /* NotificationViewController.swift */,
+				36E8C28A23A91A7E00FA9A0C /* MainInterface.storyboard */,
+				36E8C28D23A91A7E00FA9A0C /* Info.plist */,
 			);
-			path = SecondService;
+			path = MyPushContent_3;
 			sourceTree = "<group>";
 		};
 		75D7560F660BF66A6034943E /* Pods */ = {
@@ -283,7 +331,8 @@
 				36DC942623A78EA400538818 /* MyPush */,
 				36DC943A23A7B52700538818 /* MuPushContent */,
 				36E8C25023A8F51700FA9A0C /* MyPushContent_2 */,
-				36E8C26223A8F7E300FA9A0C /* SecondService */,
+				36E8C28723A91A7E00FA9A0C /* MyPushContent_3 */,
+				36AAD72B23AA0A0D00FC2436 /* MyPushContent_4 */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				75D7560F660BF66A6034943E /* Pods */,
@@ -300,7 +349,8 @@
 				36DC942523A78EA400538818 /* MyPush.appex */,
 				36DC943523A7B52700538818 /* MuPushContent.appex */,
 				36E8C24D23A8F51700FA9A0C /* MyPushContent_2.appex */,
-				36E8C26123A8F7E300FA9A0C /* SecondService.appex */,
+				36E8C28423A91A7E00FA9A0C /* MyPushContent_3.appex */,
+				36AAD72823AA0A0D00FC2436 /* MyPushContent_4.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -326,12 +376,30 @@
 				36DC942B23A78EA400538818 /* PBXTargetDependency */,
 				36DC944223A7B52700538818 /* PBXTargetDependency */,
 				36E8C25823A8F51700FA9A0C /* PBXTargetDependency */,
-				36E8C26723A8F7E300FA9A0C /* PBXTargetDependency */,
+				36E8C28F23A91A7E00FA9A0C /* PBXTargetDependency */,
+				36AAD73323AA0A0D00FC2436 /* PBXTargetDependency */,
 			);
 			name = Firebase_PushAnalyticAdvertisement;
 			productName = Firebase_PushAnalyticAdvertisement;
 			productReference = 13B07F961A680F5B00A75B9A /* Firebase_PushAnalyticAdvertisement.app */;
 			productType = "com.apple.product-type.application";
+		};
+		36AAD72723AA0A0D00FC2436 /* MyPushContent_4 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36AAD73723AA0A0D00FC2436 /* Build configuration list for PBXNativeTarget "MyPushContent_4" */;
+			buildPhases = (
+				36AAD72423AA0A0D00FC2436 /* Sources */,
+				36AAD72523AA0A0D00FC2436 /* Frameworks */,
+				36AAD72623AA0A0D00FC2436 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyPushContent_4;
+			productName = MyPushContent_4;
+			productReference = 36AAD72823AA0A0D00FC2436 /* MyPushContent_4.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		36DC942423A78EA400538818 /* MyPush */ = {
 			isa = PBXNativeTarget;
@@ -384,21 +452,21 @@
 			productReference = 36E8C24D23A8F51700FA9A0C /* MyPushContent_2.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		36E8C26023A8F7E300FA9A0C /* SecondService */ = {
+		36E8C28323A91A7E00FA9A0C /* MyPushContent_3 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 36E8C26923A8F7E300FA9A0C /* Build configuration list for PBXNativeTarget "SecondService" */;
+			buildConfigurationList = 36E8C29123A91A7E00FA9A0C /* Build configuration list for PBXNativeTarget "MyPushContent_3" */;
 			buildPhases = (
-				36E8C25D23A8F7E300FA9A0C /* Sources */,
-				36E8C25E23A8F7E300FA9A0C /* Frameworks */,
-				36E8C25F23A8F7E300FA9A0C /* Resources */,
+				36E8C28023A91A7E00FA9A0C /* Sources */,
+				36E8C28123A91A7E00FA9A0C /* Frameworks */,
+				36E8C28223A91A7E00FA9A0C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SecondService;
-			productName = SecondService;
-			productReference = 36E8C26123A8F7E300FA9A0C /* SecondService.appex */;
+			name = MyPushContent_3;
+			productName = MyPushContent_3;
+			productReference = 36E8C28423A91A7E00FA9A0C /* MyPushContent_3.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -413,6 +481,11 @@
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = 9T9EKPAPC4;
+					};
+					36AAD72723AA0A0D00FC2436 = {
+						CreatedOnToolsVersion = 11.2.1;
+						DevelopmentTeam = 9T9EKPAPC4;
+						ProvisioningStyle = Automatic;
 					};
 					36DC942423A78EA400538818 = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -429,7 +502,7 @@
 						DevelopmentTeam = 9T9EKPAPC4;
 						ProvisioningStyle = Automatic;
 					};
-					36E8C26023A8F7E300FA9A0C = {
+					36E8C28323A91A7E00FA9A0C = {
 						CreatedOnToolsVersion = 11.2.1;
 						DevelopmentTeam = 9T9EKPAPC4;
 						ProvisioningStyle = Automatic;
@@ -454,7 +527,8 @@
 				36DC942423A78EA400538818 /* MyPush */,
 				36DC943423A7B52700538818 /* MuPushContent */,
 				36E8C24C23A8F51700FA9A0C /* MyPushContent_2 */,
-				36E8C26023A8F7E300FA9A0C /* SecondService */,
+				36E8C28323A91A7E00FA9A0C /* MyPushContent_3 */,
+				36AAD72723AA0A0D00FC2436 /* MyPushContent_4 */,
 			);
 		};
 /* End PBXProject section */
@@ -467,6 +541,14 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				36125DD62397E5740028F755 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36AAD72623AA0A0D00FC2436 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36AAD73023AA0A0D00FC2436 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,10 +575,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		36E8C25F23A8F7E300FA9A0C /* Resources */ = {
+		36E8C28223A91A7E00FA9A0C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36E8C28C23A91A7E00FA9A0C /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,8 +648,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				362D247A23AA592C00EBB2BD /* NotificationDelegate.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36AAD72423AA0A0D00FC2436 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36AAD72D23AA0A0D00FC2436 /* NotificationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,17 +686,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		36E8C25D23A8F7E300FA9A0C /* Sources */ = {
+		36E8C28023A91A7E00FA9A0C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36E8C26423A8F7E300FA9A0C /* NotificationService.swift in Sources */,
+				36E8C28923A91A7E00FA9A0C /* NotificationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		36AAD73323AA0A0D00FC2436 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36AAD72723AA0A0D00FC2436 /* MyPushContent_4 */;
+			targetProxy = 36AAD73223AA0A0D00FC2436 /* PBXContainerItemProxy */;
+		};
 		36DC942B23A78EA400538818 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 36DC942423A78EA400538818 /* MyPush */;
@@ -620,10 +717,10 @@
 			target = 36E8C24C23A8F51700FA9A0C /* MyPushContent_2 */;
 			targetProxy = 36E8C25723A8F51700FA9A0C /* PBXContainerItemProxy */;
 		};
-		36E8C26723A8F7E300FA9A0C /* PBXTargetDependency */ = {
+		36E8C28F23A91A7E00FA9A0C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 36E8C26023A8F7E300FA9A0C /* SecondService */;
-			targetProxy = 36E8C26623A8F7E300FA9A0C /* PBXContainerItemProxy */;
+			target = 36E8C28323A91A7E00FA9A0C /* MyPushContent_3 */;
+			targetProxy = 36E8C28E23A91A7E00FA9A0C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -635,6 +732,14 @@
 			);
 			name = LaunchScreen.xib;
 			path = Firebase_PushAnalyticAdvertisement;
+			sourceTree = "<group>";
+		};
+		36AAD72E23AA0A0D00FC2436 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36AAD72F23AA0A0D00FC2436 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 		36DC943D23A7B52700538818 /* MainInterface.storyboard */ = {
@@ -653,6 +758,14 @@
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
+		36E8C28A23A91A7E00FA9A0C /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36E8C28B23A91A7E00FA9A0C /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -667,7 +780,7 @@
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 9T9EKPAPC4;
 				INFOPLIST_FILE = Firebase_PushAnalyticAdvertisement/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -690,7 +803,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9T9EKPAPC4;
 				INFOPLIST_FILE = Firebase_PushAnalyticAdvertisement/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -700,6 +813,61 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Firebase_PushAnalyticAdvertisement;
 				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		36AAD73523AA0A0D00FC2436 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 9T9EKPAPC4;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = MyPushContent_4/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Firebase-PushAnalyticAdvertisement.MyPushContent-4";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		36AAD73623AA0A0D00FC2436 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9T9EKPAPC4;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = MyPushContent_4/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Firebase-PushAnalyticAdvertisement.MyPushContent-4";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -717,7 +885,7 @@
 				DEVELOPMENT_TEAM = 9T9EKPAPC4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = MyPush/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -727,7 +895,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -746,7 +914,7 @@
 				DEVELOPMENT_TEAM = 9T9EKPAPC4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = MyPush/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Firebase-PushAnalyticAdvertisement.MyPush";
@@ -754,7 +922,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -772,7 +940,7 @@
 				DEVELOPMENT_TEAM = 9T9EKPAPC4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = MuPushContent/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -801,7 +969,7 @@
 				DEVELOPMENT_TEAM = 9T9EKPAPC4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = MuPushContent/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Firebase-PushAnalyticAdvertisement.MuPushContent";
@@ -827,7 +995,7 @@
 				DEVELOPMENT_TEAM = 9T9EKPAPC4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = MyPushContent_2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -837,7 +1005,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -856,7 +1024,7 @@
 				DEVELOPMENT_TEAM = 9T9EKPAPC4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = MyPushContent_2/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Firebase-PushAnalyticAdvertisement.MyPushContent-2";
@@ -864,11 +1032,11 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
-		36E8C26A23A8F7E300FA9A0C /* Debug */ = {
+		36E8C29223A91A7E00FA9A0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
@@ -881,22 +1049,22 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 9T9EKPAPC4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = SecondService/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				INFOPLIST_FILE = MyPushContent_3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Firebase-PushAnalyticAdvertisement.SecondService";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Firebase-PushAnalyticAdvertisement.MyPushContent-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		36E8C26B23A8F7E300FA9A0C /* Release */ = {
+		36E8C29323A91A7E00FA9A0C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
@@ -910,16 +1078,16 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9T9EKPAPC4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = SecondService/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				INFOPLIST_FILE = MyPushContent_3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Firebase-PushAnalyticAdvertisement.SecondService";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.Firebase-PushAnalyticAdvertisement.MyPushContent-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1034,6 +1202,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		36AAD73723AA0A0D00FC2436 /* Build configuration list for PBXNativeTarget "MyPushContent_4" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36AAD73523AA0A0D00FC2436 /* Debug */,
+				36AAD73623AA0A0D00FC2436 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		36DC943023A78EA400538818 /* Build configuration list for PBXNativeTarget "MyPush" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1061,11 +1238,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		36E8C26923A8F7E300FA9A0C /* Build configuration list for PBXNativeTarget "SecondService" */ = {
+		36E8C29123A91A7E00FA9A0C /* Build configuration list for PBXNativeTarget "MyPushContent_3" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				36E8C26A23A8F7E300FA9A0C /* Debug */,
-				36E8C26B23A8F7E300FA9A0C /* Release */,
+				36E8C29223A91A7E00FA9A0C /* Debug */,
+				36E8C29323A91A7E00FA9A0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

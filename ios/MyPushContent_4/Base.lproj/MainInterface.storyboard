@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" userLabel="Notification View Controller" customClass="NotificationViewController" customModule="MyPushContent_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="&lt;Title&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKU-dU-4Zl">
+                                <rect key="frame" x="5" y="10" width="310" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="justified" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="5ae-iK-IIg">
+                                <rect key="frame" x="5" y="100" width="310" height="21"/>
+                                <mutableString key="text">&lt;Body&gt; __ Body of Your Notification __ Body of Your Notification __ Body of Your Notification __ Body of Your Notification __ Body of Your Notification __ Body of Your Notification __ Body of Your Notification __ Body of Your Notification __ Body of Your Notification __ Body of Your Notification __ Body of Your Notification __ Body of Your Notification __ Body of Your Notification __ Body of Your Notification __ Body of Your Notification __ Body of Your Notification __ Body of Your Notification __ Body of Your Notification </mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lKU-dU-4Zl" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="5" id="26G-Q8-Fai"/>
+                            <constraint firstItem="5ae-iK-IIg" firstAttribute="leading" secondItem="2BE-c3-nQJ" secondAttribute="leading" constant="5" id="3SD-Ka-GrD"/>
+                            <constraint firstItem="5ae-iK-IIg" firstAttribute="top" secondItem="lKU-dU-4Zl" secondAttribute="bottom" constant="10" id="EAM-EJ-Fut"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="bottom" secondItem="5ae-iK-IIg" secondAttribute="bottom" constant="10" id="WD9-ml-hSw"/>
+                            <constraint firstAttribute="trailing" secondItem="lKU-dU-4Zl" secondAttribute="trailing" constant="5" id="h7f-mc-jPy"/>
+                            <constraint firstItem="2BE-c3-nQJ" firstAttribute="trailing" secondItem="5ae-iK-IIg" secondAttribute="trailing" constant="5" id="iDA-aX-FzQ"/>
+                            <constraint firstItem="lKU-dU-4Zl" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" constant="10" id="j4w-05-zpI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2BE-c3-nQJ"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="150"/>
+                    <connections>
+                        <outlet property="bodyLabel" destination="5ae-iK-IIg" id="39r-gX-zbZ"/>
+                        <outlet property="titleLabel" destination="lKU-dU-4Zl" id="73F-wQ-1kf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="98"/>
+        </scene>
+    </scenes>
+</document>
