@@ -1,5 +1,5 @@
 import firebase from 'react-native-firebase';
-import {Platform} from 'react-native';
+import {Platform, Alert} from 'react-native';
 
 export const initPushNotifications = async (
   onNotificationCallback,
@@ -117,11 +117,33 @@ const handleNotification = notification => {
   firebase.notifications().displayNotification(notification);
 };
 
-const handleNotificationOpened = notificationData => {};
+const handleNotificationOpened = notificationData => {
+  console.log('\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\/');
+  console.log('========================================================');
+  console.log(notificationData);
+  Alert.alert(
+    null,
+    `It was '${notificationData.action}' action${
+      notificationData.action === 'InputMessage'
+        ? ` with '${notificationData.results.resultKey}' message`
+        : ''
+    }`,
+  );
+};
 
 const handleInitialNotification = notification => {
-  console.log(notification);
-  console.log(notification.notification);
+  // Alert.alert(null, `It was '${notification.action}' action`);
+  Alert.alert(
+    null,
+    `It was '${notification.action}' action${
+      notification.action === 'InputMessage'
+        ? ` with '${notification.results.resultKey}' message`
+        : ''
+    }`,
+  );
+  console.log('========================================================');
+  console.warn(notification);
+  console.warn(notification.notification);
   notification.notification.android.setChannelId('insider').setSound('default');
   // firebase.notifications().displayNotification(notification.notification);
   firebase.notifications().setBadge(0);

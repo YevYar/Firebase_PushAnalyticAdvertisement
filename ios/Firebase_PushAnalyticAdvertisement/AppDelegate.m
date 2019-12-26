@@ -42,18 +42,23 @@
   
   UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
   UNNotificationAction* openAction = [UNNotificationAction actionWithIdentifier: @"OpenNotification" title: @"Say 'YES'"
-  options:UNNotificationActionOptionAuthenticationRequired];
+                                                                        options:UNNotificationActionOptionForeground];
   UNNotificationAction* closeAction = [UNNotificationAction actionWithIdentifier: @"CloseNotification" title: @"Say 'NO'"
-                                                                         options:UNNotificationActionOptionDestructive];
+                                                                         options: UNNotificationActionOptionForeground];
+  
+  UNTextInputNotificationAction *inputAction = [UNTextInputNotificationAction actionWithIdentifier: @"InputMessage" title: @"Provide your answer" options: UNNotificationActionOptionForeground textInputButtonTitle: @"Send" textInputPlaceholder: @"Answer"];
   
   UNNotificationCategory* defaultCategory = [UNNotificationCategory categoryWithIdentifier: @"CustomSamplePush" actions: @[openAction, closeAction] intentIdentifiers: @[] options: @[]];
-  UNNotificationCategory* defaultCategory_2 = [UNNotificationCategory categoryWithIdentifier: @"CustomSamplePush_4" actions: @[openAction, closeAction] intentIdentifiers: @[] options: @[]];
+  UNNotificationCategory* defaultCategory_2 = [UNNotificationCategory categoryWithIdentifier: @"CustomSamplePush_4" actions: @[/*openAction, closeAction, */inputAction] intentIdentifiers: @[] options: @[]];
+  // если указано только UNTextInputNotificationAction действие, то при зажатии пуша будет сразу открываться поле ввода, если есть другие action, тогда будут отображены их кнопки + кнопка с title, указанным для UNTextInputNotificationAction, при нажатии на которую будет открываться поле ввода
   NSSet *categories = [NSSet setWithObjects: defaultCategory, defaultCategory_2, nil];
   [center setNotificationCategories: categories];
   // [center setDelegate: self];
   
-  notificationDelegate = [NotificationDelegate new];
-  [center setDelegate: notificationDelegate];
+  /* notificationDelegate = [NotificationDelegate new];
+  [center setDelegate: notificationDelegate]; */
+  
+  
   
   /*UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
   UNNotificationCategory* defaultCategory = [UNNotificationCategory categoryWithIdentifier: @"CustomSamplePush" actions: @[] intentIdentifiers: @[] options: @[]];
