@@ -14,8 +14,6 @@
 #import "RNFirebaseNotifications.h"
 #import "RNFirebaseMessaging.h"
 
-//NotificationDelegate *notificationDelegate;
-
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -49,27 +47,11 @@
   UNTextInputNotificationAction *inputAction = [UNTextInputNotificationAction actionWithIdentifier: @"InputMessage" title: @"Provide your answer" options: UNNotificationActionOptionForeground textInputButtonTitle: @"Send" textInputPlaceholder: @"Answer"];
   
   UNNotificationCategory* defaultCategory = [UNNotificationCategory categoryWithIdentifier: @"CustomSamplePush" actions: @[openAction, closeAction] intentIdentifiers: @[] options: @[]];
-  UNNotificationCategory* defaultCategory_2 = [UNNotificationCategory categoryWithIdentifier: @"CustomSamplePush_4" actions: @[/*openAction, closeAction, */inputAction] intentIdentifiers: @[] options: @[]];
+  UNNotificationCategory* defaultCategory_2 = [UNNotificationCategory categoryWithIdentifier: @"CustomSamplePush_4" actions: @[openAction, closeAction, inputAction] intentIdentifiers: @[] options: @[]];
   // если указано только UNTextInputNotificationAction действие, то при зажатии пуша будет сразу открываться поле ввода, если есть другие action, тогда будут отображены их кнопки + кнопка с title, указанным для UNTextInputNotificationAction, при нажатии на которую будет открываться поле ввода
   NSSet *categories = [NSSet setWithObjects: defaultCategory, defaultCategory_2, nil];
   [center setNotificationCategories: categories];
-  // [center setDelegate: self];
-  
-  /* notificationDelegate = [NotificationDelegate new];
-  [center setDelegate: notificationDelegate]; */
-  
-  
-  
-  /*UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
-  UNNotificationCategory* defaultCategory = [UNNotificationCategory categoryWithIdentifier: @"CustomSamplePush" actions: @[] intentIdentifiers: @[] options: @[]];
-  NSSet *categories = [NSSet setWithObjects: defaultCategory, nil];
-  [center setNotificationCategories: categories];*/
-  
-  /*let center = UNUserNotificationCenter.current()
-  let openAction = UNNotificationAction(identifier: "OpenNotification", title: NSLocalizedString("Abrir", comment: ""), options: UNNotificationActionOptions.foreground)
-  let deafultCategory = UNNotificationCategory(identifier: "CustomSamplePush", actions: [openAction], intentIdentifiers: [], options: [])
-  center.setNotificationCategories(Set([deafultCategory]))*/
-  
+    
   return YES;
 }
 

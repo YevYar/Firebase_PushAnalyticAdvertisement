@@ -13,7 +13,6 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		36125DD62397E5740028F755 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36125DD52397E5740028F755 /* GoogleService-Info.plist */; };
-		362D247A23AA592C00EBB2BD /* NotificationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 362D247923AA592C00EBB2BD /* NotificationDelegate.m */; };
 		36AAD72923AA0A0D00FC2436 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC943623A7B52700538818 /* UserNotifications.framework */; };
 		36AAD72A23AA0A0D00FC2436 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DC943823A7B52700538818 /* UserNotificationsUI.framework */; };
 		36AAD72D23AA0A0D00FC2436 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AAD72C23AA0A0D00FC2436 /* NotificationViewController.swift */; };
@@ -108,8 +107,6 @@
 		1EFFA82B63C9DA10C9C0BAEE /* libPods-Firebase_PushAnalyticAdvertisement-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Firebase_PushAnalyticAdvertisement-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A759FBC8E8BEBB90940F80E /* Pods-Firebase_PushAnalyticAdvertisement-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase_PushAnalyticAdvertisement-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Firebase_PushAnalyticAdvertisement-tvOSTests/Pods-Firebase_PushAnalyticAdvertisement-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		36125DD52397E5740028F755 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Firebase_PushAnalyticAdvertisement/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		362D247923AA592C00EBB2BD /* NotificationDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NotificationDelegate.m; path = Firebase_PushAnalyticAdvertisement/NotificationDelegate.m; sourceTree = "<group>"; };
-		362D247B23AA595F00EBB2BD /* NotificationDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NotificationDelegate.h; path = Firebase_PushAnalyticAdvertisement/NotificationDelegate.h; sourceTree = "<group>"; };
 		36AAD72823AA0A0D00FC2436 /* MyPushContent_4.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyPushContent_4.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		36AAD72C23AA0A0D00FC2436 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		36AAD72F23AA0A0D00FC2436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -230,8 +227,6 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				362D247923AA592C00EBB2BD /* NotificationDelegate.m */,
-				362D247B23AA595F00EBB2BD /* NotificationDelegate.h */,
 			);
 			name = Firebase_PushAnalyticAdvertisement;
 			sourceTree = "<group>";
@@ -648,7 +643,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				362D247A23AA592C00EBB2BD /* NotificationDelegate.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
