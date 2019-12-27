@@ -16,6 +16,7 @@ import {
   View,
   Text,
   StatusBar,
+  AsyncStorage,
 } from 'react-native';
 
 import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
@@ -26,6 +27,9 @@ import {initPushNotifications} from './NotifService';
 
 class App extends Component {
   async componentDidMount() {
+    AsyncStorage.getItem('lastScore').then(score =>
+      console.warn(`score: ${score}`),
+    );
     const onNotificationCallback = () => {
       this.setState({bgColor: '#1e90ff55', text: 'on notification'});
     };

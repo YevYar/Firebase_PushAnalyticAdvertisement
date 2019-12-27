@@ -1,5 +1,5 @@
 import firebase from 'react-native-firebase';
-import {Platform, Alert} from 'react-native';
+import {Platform, Alert, AsyncStorage} from 'react-native';
 
 export const initPushNotifications = async (
   onNotificationCallback,
@@ -9,8 +9,8 @@ export const initPushNotifications = async (
   // steps to receive notifications: https://rnfirebase.io/docs/v5.x.x/notifications/receiving-notifications
   // must create channel. https://rnfirebase.io/docs/v5.x.x/notifications/android-channels
   const channel = new firebase.notifications.Android.Channel(
-    'insider',
-    'insider channel',
+    'CustomSamplePush_4',
+    'CustomSamplePush_4 channel',
     firebase.notifications.Android.Importance.Max,
   );
   firebase.notifications().android.createChannel(channel);
@@ -105,6 +105,8 @@ export const createNotificationListeners = async (
     handleNotificationOpened(notification);
     onNotificationOpenedCallback();
   });
+
+  firebase.messaging().onMessage(handleMessage);
 };
 
 const handleNotification = notification => {
@@ -113,7 +115,7 @@ const handleNotification = notification => {
   notification.setSound('bell.mp3');
   notification.android.setVibrate([500]);
   notification.android.setAutoCancel(true);
-  notification.android.setChannelId('insider');
+  notification.android.setChannelId('CustomSamplePush_4');
   firebase.notifications().displayNotification(notification);
 };
 
@@ -144,8 +146,18 @@ const handleInitialNotification = notification => {
   console.log('========================================================');
   console.warn(notification);
   console.warn(notification.notification);
-  notification.notification.android.setChannelId('insider').setSound('default');
+  notification.notification.android
+    .setChannelId('CustomSamplePush_4')
+    .setSound('default');
   // firebase.notifications().displayNotification(notification.notification);
   firebase.notifications().setBadge(0);
   firebase.notifications().removeAllDeliveredNotifications();
+};
+
+const handleMessage = message => {
+  console.log('==================================>>> We are in this gap!!!');
+  console.log(message);
+  console.log(message._data.score);
+  console.warn(`score: ${message._data.score}`);
+  AsyncStorage.setItem('lastScore', message._data.score);
 };
